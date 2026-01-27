@@ -77,6 +77,10 @@ ul{
     padding-bottom: 5.6rem;
 }
 
+.p-block-60{
+    padding-block: 3.75rem; /*padding top and bottom*/
+}
+
 /*----------------------- Navbar Styling ----------------------- */
 .navbar{
     background-color: rgba(255, 255, 255, .92);
@@ -90,7 +94,13 @@ ul{
     left: 0;
     right: 0;
     z-index: 99;
+    transition: .3s ease-in-out;
 }
+
+.scroll-nav{
+    height: 5.6rem;
+}
+
 .navbar-brand{
     font-weight: 600;
     font-size: 1.4rem;
@@ -450,23 +460,48 @@ sub{
     transform: scale(1.05) translateY(3%);
 }
 
+/* ----------------------Section 6------------------ */
+.phone-app{
+    position: relative;
+    padding-bottom: 90%;
+}
+.mobile-app{
+    position: absolute;
+    width: 113%;
+    height: 105%;
+    right: -10%;
+    top: 0;
+}
+
+.call-to-action{
+    position: relative;
+}
+
+.call-to-action::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -12%;
+    width: 80%;
+    height: 100%;
+    background: var(--light-gray);
+    /* background-color: aquamarine; */
+    z-index: -1;
+    border-left: 1.875rem solid var(--white);
+}
+
+/* ----------------------Footer Section------------ */
+.footer-frame{
+    padding-block: 1.8rem;
+}
+
+.copy{
+    font-size: .75rem;
+    color: var(--light-black-market);
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*------------ Responsiveness ----------------- */
 @media screen and (max-width:990px){
     /* navbar collapse design in small screen */
     .navbar-collapse{
@@ -501,5 +536,62 @@ sub{
     /* Decreased navbar height in mobile screen */
     .navbar{
         height: 5.6rem;
+    }
+
+    .navbar-brand{
+        font-size: 1.3rwm;
+    }
+
+    .hero{
+        margin-top: 5.5rem;
+    }
+
+    .interior-frame{
+        padding-bottom: 65%;
+    }
+
+    .sub-interior{
+        width: 100%;
+    }
+
+    .exp{
+        width: 40%;
+    }
+
+    .hero::before{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:768px){
+    .heading{
+        font-size: 3.37rem;
+        letter-spacing: -.12rem;
+    }
+
+    .interior-frame{
+        padding-bottom: 110%;
+    }
+
+    .exp{
+        width: 50%;
+        right: 0;
+    }
+
+    h2{
+        font-size: 2.25rem;
+    }
+
+    h3{
+        font-size:1.25rem;
+    }
+
+    .mobile-app{
+        right: 0;
+    }
+
+    .call-to-action::before{
+        width: 100%;
     }
 }
