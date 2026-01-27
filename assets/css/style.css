@@ -474,10 +474,11 @@ sub{
 }
 
 .call-to-action{
-    position: relative;
+    /* position: relative; */
+    background-color: var(--dark-gray);
 }
 
-.call-to-action::before{
+/* .call-to-action::before{
     content: '';
     position: absolute;
     top: 0;
@@ -485,10 +486,9 @@ sub{
     width: 80%;
     height: 100%;
     background: var(--light-gray);
-    /* background-color: aquamarine; */
     z-index: -1;
     border-left: 1.875rem solid var(--white);
-}
+} */
 
 /* ----------------------Footer Section------------ */
 .footer-frame{
@@ -591,7 +591,7 @@ sub{
         right: 0;
     }
 
-    .call-to-action::before{
+    /* .call-to-action::before{
         width: 100%;
-    }
+    } */
 }
