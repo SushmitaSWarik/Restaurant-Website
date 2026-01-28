@@ -566,7 +566,7 @@ sub{
 
 @media screen and (max-width:768px){
     .heading{
-        font-size: 1.90rem;
+        font-size: 1.95rem;
         letter-spacing: -.12rem;
     }
 
